@@ -59,7 +59,7 @@ def add_product(request):
         form = ProductForm()
     return render(
         request,
-        "userprofile/add_product.html",
+        "userprofile/product_form.html",
         {
             "title": "Add Product",
             "form": form,
@@ -85,7 +85,7 @@ def edit_product(request, pk):
 
     return render(
         request,
-        "userprofile/add_product.html",
+        "userprofile/product_form.html",
         {
             "title": "Edit Product",
             "product": product,
