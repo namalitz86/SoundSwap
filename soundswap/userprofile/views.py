@@ -14,7 +14,7 @@ from store.models import Product, Category
 
 def vendor_detail(request, pk):
     user = User.objects.get(pk=pk)
-    products = User.products.filter(status=Product.ACTIVE)
+    products = user.products.filter(status=Product.ACTIVE)
 
     return render(
         request,
